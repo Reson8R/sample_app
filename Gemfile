@@ -10,9 +10,13 @@ gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
 gem 'jquery-rails', '1.0.19'
 gem 'gravatar_image_tag', '1.0.0'
 
+# remember to run bundler w/o production if you don't have pg on the dev computer
+# "bundle --without production"
 group :development do
 	gem 'rspec-rails', '2.7.0'
 	gem 'annotate', '~> 2.4.1.beta'
+	gem 'therubyracer-heroku', '0.8.1.pre3'
+	gem 'pg'
 end
 
 group :test do
