@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  # note to me: using the resouces directive as below will automatically
+  # create routes for the actions in the specified controller.
   resources :users
 
   match '/contact', :to => 'pages#contact'

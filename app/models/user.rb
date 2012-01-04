@@ -8,6 +8,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -23,14 +24,13 @@ class User < ActiveRecord::Base
                       :uniqueness => { :case_sensitive => false }
     validates :password,  :presence     => true,
                           :confirmation => true,
-                          :length => { :within => 6..40 }
+                          :length       => { :within => 6..40 }
     
     before_save :encrypt_password
     
     def has_password?(submitted_password)
       encrypted_password == encrypt(submitted_password)
     end
-    
     
     # Put any User class level methods here
     class << self
