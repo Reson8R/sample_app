@@ -15,7 +15,8 @@ SampleApp::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # set this to true to get things to work on Heroku - 1/5/11 - pgp
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
