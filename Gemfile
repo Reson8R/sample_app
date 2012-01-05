@@ -8,7 +8,8 @@ gem 'rails', '3.1.1'
 gem 'jquery-rails', '1.0.19'
 gem 'gravatar_image_tag', '1.0.0'
 gem 'therubyracer-heroku', '0.8.1.pre3'
-gem 'pg'
+gem 'pg', '0.12.2'
+gem 'uglifier', '1.0.4'
 
 group :development do
 	gem 'rspec-rails', '2.7.0'
