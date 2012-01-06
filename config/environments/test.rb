@@ -5,7 +5,10 @@ SampleApp::Application.configure do
   # test suite.  You never need to work with it otherwise.  Remember that
   # your test database is "scratch space" for the test suite and is wiped
   # and recreated between test runs.  Don't rely on the data there!
-  config.cache_classes = true
+  
+  # 2012-01-06: Changed this from the default of 'true' to 'false' so that spork
+  # would pick up changes without haveing to be restarted all the time
+  config.cache_classes = false
 
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
