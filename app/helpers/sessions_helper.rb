@@ -1,8 +1,11 @@
 module SessionsHelper
-
+# =============================================================
+# = be sure to use self. prefix for class level variable here =
+# = for some reason they won't get set without it!!           =
+# =============================================================
   def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
-    current_user = user
+    self.current_user = user
   end
 
   def current_user=(user)
@@ -14,12 +17,12 @@ module SessionsHelper
   end
   
   def signed_in?
-    !current_user.nil?
+    !self.current_user.nil?
   end
   
   def sign_out
     cookies.delete(:remember_token)
-    current_user = nil
+    self.current_user = nil
   end
   
   private

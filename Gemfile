@@ -22,5 +22,6 @@ group :test do
 	gem 'webrat', '0.7.3'
 	gem 'spork', '0.8.5'
 	gem 'factory_girl_rails', '1.4.0'
+	gem 'ruby-debug19'
 end
 
