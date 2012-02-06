@@ -11,10 +11,12 @@ gem 'therubyracer-heroku', '0.8.1.pre3'
 gem 'pg', '0.12.2'
 # Without uglifier precompiling of assets pukes.
 gem 'uglifier', '1.0.4'
+gem 'will_paginate', '3.0.2'
 
 group :development do
 	gem 'rspec-rails', '2.7.0'
 	gem 'annotate', '~> 2.4.1.beta'
+	gem 'faker', '1.0.1'
 end
 
 group :test do
